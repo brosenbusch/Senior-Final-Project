@@ -1,5 +1,5 @@
 const readline = require('readline');
-const testString  =require('./string');
+const testString  = require('./string');
 
 
 function getString(){
