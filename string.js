@@ -105,7 +105,7 @@ exports.containsSpecial =function(str){
       }
     }
     if(){
-      throw
+      throw PasswordMessage("does not have special character");
     }
   }
   catch(e){
