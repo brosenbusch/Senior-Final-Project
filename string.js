@@ -1,8 +1,8 @@
 var exports = module.exports = {};
 
 function PasswordMessage(m){
-  this.name = "Password Message"
-  this.message = m
+  this.name = "Password Message";
+  this.message = m;
 }
 
 function inRange(char,min,max){
@@ -41,11 +41,11 @@ exports.containsUpper =function(str){
     for(var a=0; a<str.length; a++){
       if(inRange(str[a],65,90)){
         hasUpper = true;
-        throw PasswordMessage("has uppercase character");
+        throw new PasswordMessage("has uppercase character");
       }
     }
-    if(hasUpper = false){
-      throw PasswordMessage("does not have an uppercase character");
+    if(hasUpper == false){
+      throw new PasswordMessage("does not have an uppercase character");
     }
   }
   catch(e){
@@ -60,11 +60,11 @@ exports.containsLower =function(str){
     for(var a=0; a<str.length; a++){
       if(inRange(str[a],97,122)){
         hasLower = true;
-        throw PasswordMessage("has lowercase character");
+        throw new PasswordMessage("has lowercase character");
       }
     }
-    if(hasLower = false){
-      throw PasswordMessage("does not have an lowercase character");
+    if(hasLower == false){
+      throw new PasswordMessage("does not have an lowercase character");
     }
   }
   catch(e){
@@ -79,11 +79,11 @@ exports.containsNumerical = function(str){
     for(var a=0; a<str.length; a++){
       if(inRange(str[a],48,57)){
         hasNumerical = true;
-        throw PasswordMessage("has numerical character");
+        throw new PasswordMessage("has numerical character");
       }
     }
-    if(hasUpper = false){
-      throw PasswordMessage("does not have a numerical character");
+    if(hasUpper == false){
+      throw new PasswordMessage("does not have a numerical character");
     }
   }
   catch(e){
@@ -100,12 +100,12 @@ exports.containsSpecial =function(str){
       for(var b=0; b<special.length; b++){
         if(str[a]==special[b]){
           hasSpecial = true;
-          throw PasswordMessage("has special character");
+          throw new PasswordMessage("has special character");
         }
       }
     }
-    if(){
-      throw PasswordMessage("does not have special character");
+    if(hasSpecial == false){
+      throw new PasswordMessage("does not have special character");
     }
   }
   catch(e){
